@@ -1,0 +1,25 @@
+CREATE SCHEMA [tic-chatbot-stage-3];
+GO
+
+CREATE TABLE [tic-chatbot-stage-3].[Azure] (
+    Date NVARCHAR(4000),
+    No NVARCHAR(4000),
+    MachineType NVARCHAR(4000),
+    InquiryClassification NVARCHAR(4000),
+    Part NVARCHAR(4000),
+    PartCode NVARCHAR(4000),
+    ClassificationNumber NVARCHAR(4000),
+    ChassisNumber NVARCHAR(4000),
+    Mileage NVARCHAR(4000),
+    Subject NVARCHAR(4000), --J
+    Content NVARCHAR(4000),
+    InspectionResult NVARCHAR(4000),
+    Response NVARCHAR(4000), --M
+    EngineType NVARCHAR(4000),
+    RegistrationDate NVARCHAR(4000)
+);
+
+select * from [tic-chatbot-stage-3].[Azure]
+
+select No, Response from [tic-chatbot-stage-3].[Azure]
+WHERE No = 'HT24983';
